@@ -12,7 +12,7 @@ class ToDoList{
             }
         }
         
-        if (uniqItem && this.items.length<10 && user.isValid()) {
+        if (uniqItem && this.items.length<10 && (user.isEmailValid() && user.isPasswordValid() && user.isNameValid() && user.isAgeValid())) {
 
             if(this.items.length == 0){
                 this.items.push(item);
@@ -39,7 +39,7 @@ class ToDoList{
     }
 
     sendMail(user) {
-        console.log("Envoie du mail à : " + user.email);
+        console.log("Envoi du mail à : " + user.email);
     }
 }
 

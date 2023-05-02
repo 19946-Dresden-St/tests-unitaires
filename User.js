@@ -80,6 +80,7 @@ class User {
   }
 
   isAgeValid() {
+    return true;
   }
 
 }
