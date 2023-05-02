@@ -1,4 +1,4 @@
-const User = require('./User');
+const User = require('../User.js');
 const { describe, test, expect } = require('@jest/globals');
 
 const user = new User('izia.crinier@gmail.com', 'azeAZE123', 'Izïa', 'CRINIER', new Date("1996-04-24T10:27:33.510Z"));

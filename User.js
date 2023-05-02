@@ -1,11 +1,12 @@
 class User {
 
-  constructor(email, password, firstname, lastname, birthdate) {
-    this.email = email;
-    this.password = password;
-    this.firstname = firstname;
-    this.lastname = lastname;
-    this.birthdate = birthdate;
+  constructor(email, password, firstname, lastname, birthdate, todolist) {
+    this.email = email
+    this.password = password
+    this.firstname = firstname
+    this.lastname = lastname
+    this.birthdate = birthdate
+    this.todolist = todolist
   }
 
   get email() {
@@ -48,6 +49,14 @@ class User {
     this._birthdate = value;
   }
 
+  get todolist() {
+    return this._todolist;
+  }
+
+  set todolist(value) {
+    this._todolist = value;
+  }
+
   isEmailValid() {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (this.email !== undefined && regex.test(this.email)) {
@@ -71,6 +80,16 @@ class User {
   }
 
   isAgeValid() {
+    let currentDate =  new Date();
+    let diffMs = currentDate - this.birthdate;
+
+    let age = Math.floor(diffMs / (1000 * 60 * 60 * 24 * 365.25)); 
+
+    if (age >= 13) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 }

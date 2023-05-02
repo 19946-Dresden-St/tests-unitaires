@@ -6,31 +6,27 @@ class Item {
   }
 
   get name() {
-    return this.name;
+    return this._name;
   }
 
   set name(value) {
-    this.name = value;
+    this._name = value;
   }
 
   get content() {
-    return this.content;
+    return this._content;
   }
 
   set content(value) {
-    this.content = value;
+    this._content = value;
   }
 
   get creationDate() {
-    return this.creationDate;
+    return this._creationDate;
   }
 
   set creationDate(value) {
-    this.creationDate = value;
-  }
-
-  addItem() {
-    // TODO
+    this._creationDate = value;
   }
 }
 

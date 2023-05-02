@@ -19,5 +19,8 @@
     "url": "https://github.com/19946-Dresden-St/tests-unitaires/issues"
   },
   "homepage": "https://github.com/19946-Dresden-St/tests-unitaires#readme",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
 }
