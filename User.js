@@ -80,7 +80,16 @@ class User {
   }
 
   isAgeValid() {
-    return true;
+    let currentDate =  new Date();
+    let diffMs = currentDate - this.birthdate;
+
+    let age = Math.floor(diffMs / (1000 * 60 * 60 * 24 * 365.25)); 
+
+    if (age >= 13) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 }
