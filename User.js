@@ -1,11 +1,12 @@
 class User {
 
-  constructor(email, password, firstname, lastname, birthdate) {
-    this.email = email;
-    this.password = password;
-    this.firstname = firstname;
-    this.lastname = lastname;
-    this.birthdate = birthdate;
+  constructor(email, password, firstname, lastname, birthdate, todolist) {
+    this.email = email
+    this.password = password
+    this.firstname = firstname
+    this.lastname = lastname
+    this.birthdate = birthdate
+    this.todolist = todolist
   }
 
   get email() {
@@ -46,6 +47,14 @@ class User {
 
   set birthdate(value) {
     this._birthdate = value;
+  }
+
+  get todolist() {
+    return this._todolist;
+  }
+
+  set todolist(value) {
+    this._todolist = value;
   }
 
   isEmailValid() {
