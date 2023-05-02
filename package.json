@@ -2,9 +2,9 @@
   "name": "tests-unitaires",
   "version": "1.0.0",
   "description": "",
-  "main": "User.js",
+  "main": "user.test.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -12,9 +12,12 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@jest/globals": "^29.5.0"
+  },
   "bugs": {
     "url": "https://github.com/19946-Dresden-St/tests-unitaires/issues"
   },
   "homepage": "https://github.com/19946-Dresden-St/tests-unitaires#readme",
-  "type":"module"
+  "type": "module"
 }
