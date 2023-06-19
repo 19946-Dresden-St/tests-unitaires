@@ -92,6 +92,14 @@ class User {
     }
   }
 
+  isBirthdateValid() {
+    if (this.birthdate !== undefined && this.birthdate instanceof Date && this.birthdate > new Date("1900-01-01") && this.birthdate < new Date()) {
+      return true;
+    }else {
+      return false;
+    }
+  }
+
 }
 
 module.exports = User;
